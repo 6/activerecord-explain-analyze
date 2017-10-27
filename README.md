@@ -12,6 +12,13 @@ From the [PostgreSQL docs](https://www.postgresql.org/docs/9.6/static/using-expl
 
 > With **EXPLAIN ANALYZE**, EXPLAIN actually executes the query, and then displays the true row counts and true run time accumulated within each plan node.
 
+## Installation
+
+Add this line to your application's Gemfile and run `bundle` to install:
+
+```ruby
+gem 'activerecord-explain-analyze'
+```
 
 ## Example usage
 
@@ -66,14 +73,6 @@ You can then paste this JSON output into [PEV](http://tatiyants.com/pev/) or sim
 
 <img width="673" alt="screen shot 2017-10-27 at 4 24 38 pm" src="https://user-images.githubusercontent.com/158675/32123765-6b4938ae-bb33-11e7-80b6-7d9ceac013e2.png">
 
-
-## Installation
-
-Add this line to your application's Gemfile and run `bundle` to install:
-
-```ruby
-gem 'activerecord-explain-analyze'
-```
 
 ## Development
 
