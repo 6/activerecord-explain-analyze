@@ -13,10 +13,11 @@ module ActiveRecordExplainAnalyze
         raise ArgumentError, "format must be one of: #{EXPLAIN_FORMATS.join(', ')}"
       end
 
+      queries = collecting_queries_for_explain { exec_queries }
       if analyze || format != "TEXT"
-        exec_explain_with_options(collecting_queries_for_explain { exec_queries }, analyze: analyze, format: format)
+        exec_explain_with_options(queries, analyze: analyze, format: format)
       else
-        exec_explain(collecting_queries_for_explain { exec_queries })
+        exec_explain(queries)
       end
     end
 
@@ -25,12 +26,7 @@ module ActiveRecordExplainAnalyze
         msg = "EXPLAIN ("
         msg << "ANALYZE COSTS VERBOSE BUFFERS " if analyze
         msg << "FORMAT #{format})"
-        msg << " for: #{sql}".dup
-        unless binds.empty?
-          msg << " "
-          msg << binds.map { |attr| render_bind(attr) }.inspect
-        end
-        msg << "\n"
+        msg << " for: #{sql}\n".dup
         msg << connection.explain_with_options(sql, binds, analyze, format)
       end.join("\n")
 
