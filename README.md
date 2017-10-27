@@ -69,7 +69,7 @@ Results in:
       ...
 ```
 
-You can then paste this JSON output into [PEV](http://tatiyants.com/pev/) or similar tools to get a visualization of the EXPLAIN query output:
+You can then paste this JSON output into [PEV](http://tatiyants.com/pev/) or similar tools to get a visualization of the query plan:
 
 <img width="673" alt="screen shot 2017-10-27 at 4 24 38 pm" src="https://user-images.githubusercontent.com/158675/32123765-6b4938ae-bb33-11e7-80b6-7d9ceac013e2.png">
 
