@@ -46,7 +46,7 @@ Results in:
       "Actual Startup Time": 0.008,
       "Actual Total Time": 0.013,
       "Actual Rows": 30,
-      ... truncated ...
+      ...
 ```
 
 You can then paste this JSON output into [PEV](http://tatiyants.com/pev/) or similar tools to get a visualization of the EXPLAIN query output:
