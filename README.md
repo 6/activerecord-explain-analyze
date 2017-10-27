@@ -1,6 +1,6 @@
 # activerecord-explain-analyze [![CircleCI](https://circleci.com/gh/6/activerecord-explain-analyze.svg?style=svg)](https://circleci.com/gh/6/activerecord-explain-analyze) [![Gem Version](https://badge.fury.io/rb/activerecord-explain-analyze.svg)](https://rubygems.org/gems/activerecord-explain-analyze)
 
-Extends ActiveRecord#explain with support for EXPLAIN ANALYZE and output formats of JSON, XML, and YAML.
+Extends [`ActiveRecord#explain`](http://guides.rubyonrails.org/active_record_querying.html#running-explain) with support for EXPLAIN ANALYZE and output formats of JSON, XML, and YAML.
 
 It currently supports ActiveRecord 4 and 5, and PostgreSQL only.
 
