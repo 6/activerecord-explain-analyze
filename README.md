@@ -26,6 +26,8 @@ Planning time: 0.041 ms
 Execution time: 0.026 ms
 ```
 
+You can output in `:json`, `:yaml`, and `:xml` formats as well. Below demonstrates JSON:
+
 ```ruby
 Wallet.where(base_currency: "USD").explain(analyze: true, format: :json)
 ```
