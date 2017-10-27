@@ -17,13 +17,6 @@ jobs:
     steps:
       - checkout
       - run: sudo apt-get install postgresql-client
-      - restore_cache:
-          keys:
-            - v1-bundle-{{ checksum "Gemfile.lock" }}
       - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
-      - save_cache:
-          key: v1-bundle-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
       - run: bundle exec bundle-audit update && bundle exec bundle-audit check
       - run: bundle exec rspec
