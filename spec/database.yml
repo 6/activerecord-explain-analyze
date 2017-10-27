@@ -1,0 +1,7 @@
+postgres:
+  adapter:  postgresql
+  host:     localhost
+  database: activerecord-explain-analyze_test
+  username: postgres
+  schema_search_path: public
+  min_messages: warning

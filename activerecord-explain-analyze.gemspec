@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = ActiveRecordExplainAnalyze::VERSION
   spec.authors       = ["Peter Graham"]
   spec.email         = ["peterghm@gmail.com"]
-  spec.licenses      = ["MIT"] 
+  spec.licenses      = ["MIT"]
 
   spec.summary       = %q{ActiveRecord#explain with support for EXPLAIN ANALYZE and a variety of output formats}
   spec.description   = %q{Extends ActiveRecord#explain with support for EXPLAIN ANALYZE and output formats of JSON, XML, and YAML.}
@@ -31,4 +31,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-collection_matchers"
   spec.add_development_dependency "rspec-its"
   spec.add_development_dependency "bundler-audit"
+  spec.add_development_dependency "database_cleaner"
 end
