@@ -1,4 +1,4 @@
-# activerecord-explain-analyze
+# activerecord-explain-analyze [![CircleCI](https://circleci.com/gh/6/activerecord-explain-analyze.svg?style=svg)](https://circleci.com/gh/6/activerecord-explain-analyze)
 
 Extends ActiveRecord#explain with support for EXPLAIN ANALYZE and output formats of JSON, XML, and YAML.
 
