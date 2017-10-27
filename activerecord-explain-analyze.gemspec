@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "activerecord/explain/analyze/version"
+require "activerecord-explain-analyze/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "activerecord-explain-analyze"
-  spec.version       = Activerecord::Explain::Analyze::VERSION
+  spec.version       = ActiverecordExplainAnalyze::VERSION
   spec.authors       = ["Peter Graham"]
   spec.email         = ["peterghm@gmail.com"]
 
@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "activerecord", ">= 4"
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
