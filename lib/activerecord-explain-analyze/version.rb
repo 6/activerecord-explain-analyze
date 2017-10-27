@@ -1,3 +1,3 @@
-module ActiverecordExplainAnalyze
+module ActiveRecordExplainAnalyze
   VERSION = "0.1.0"
 end

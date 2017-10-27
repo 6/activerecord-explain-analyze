@@ -5,7 +5,7 @@ require "activerecord-explain-analyze/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "activerecord-explain-analyze"
-  spec.version       = ActiverecordExplainAnalyze::VERSION
+  spec.version       = ActiveRecordExplainAnalyze::VERSION
   spec.authors       = ["Peter Graham"]
   spec.email         = ["peterghm@gmail.com"]
 
