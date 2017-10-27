@@ -10,7 +10,7 @@ Wallet.where(base_currency: "USD").explain(analyze: true)
 Results in:
 
 ```sql
-EXPLAIN (ANALYZE COSTS VERBOSE BUFFERS FORMAT TEXT) for: SELECT "wallets".* FROM "wallets" WHERE "wallets"."deleted_at" IS NULL AND "wallets"."base_currency" = $1
+EXPLAIN for: SELECT "wallets".* FROM "wallets" WHERE "wallets"."deleted_at" IS NULL AND "wallets"."base_currency" = $1
 Bitmap Heap Scan on public.wallets  (cost=4.16..9.50 rows=1 width=164) (actual time=0.008..0.012 rows=30 loops=1)
   Output: id, canonical_id, client_id, wallet_type, base_currency, created_at, updated_at, deleted_at
   Recheck Cond: (wallets.deleted_at IS NULL)

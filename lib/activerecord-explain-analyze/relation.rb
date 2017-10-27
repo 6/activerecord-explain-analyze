@@ -23,10 +23,7 @@ module ActiveRecordExplainAnalyze
 
     def exec_explain_with_options(queries, analyze:, format:)
       str = queries.map do |sql, binds|
-        msg = "EXPLAIN ("
-        msg << "ANALYZE COSTS VERBOSE BUFFERS " if analyze
-        msg << "FORMAT #{format})"
-        msg << " for: #{sql}\n".dup
+        msg = "EXPLAIN for: #{sql}\n".dup
         msg << connection.explain_with_options(sql, binds, analyze, format)
       end.join("\n")
 
