@@ -19,4 +19,7 @@ jobs:
       - run: sudo apt-get install postgresql-client
       - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
       - run: bundle exec bundle-audit update && bundle exec bundle-audit check
+      - run:
+          name: Wait for db
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run: bundle exec rspec

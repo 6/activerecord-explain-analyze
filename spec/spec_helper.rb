@@ -21,7 +21,7 @@ def establish_connection(config)
 end
 
 def create_database
-  %x{psql -c 'create database "#{db_config['database']}";' -U postgres;}
+  %x{psql -h localhost -p 5432 -c 'create database "#{db_config['database']}";' -U postgres;}
   connection = establish_connection(db_config)
   connection.create_database(db_config['database']) rescue nil
 end
