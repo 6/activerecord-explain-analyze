@@ -4,7 +4,7 @@ Extends [`ActiveRecord#explain`](http://guides.rubyonrails.org/active_record_que
 
 It currently supports ActiveRecord 4 and 5, and PostgreSQL only.
 
-### What's EXPLAIN ANALYZE?
+#### What's EXPLAIN ANALYZE?
 
 From the [PostgreSQL docs](https://www.postgresql.org/docs/9.6/static/using-explain.html):
 
@@ -13,7 +13,7 @@ From the [PostgreSQL docs](https://www.postgresql.org/docs/9.6/static/using-expl
 > With **EXPLAIN ANALYZE**, EXPLAIN actually executes the query, and then displays the true row counts and true run time accumulated within each plan node.
 
 
-### Example usage
+## Example usage
 
 ```ruby
 Wallet.where(base_currency: "USD").explain(analyze: true)
