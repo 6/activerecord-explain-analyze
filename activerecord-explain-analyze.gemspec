@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = ActiveRecordExplainAnalyze::VERSION
   spec.authors       = ["Peter Graham"]
   spec.email         = ["peterghm@gmail.com"]
+  spec.licenses      = ["MIT"] 
 
   spec.summary       = %q{ActiveRecord#explain with support for EXPLAIN ANALYZE and a variety of output formats}
   spec.description   = %q{Extends ActiveRecord#explain with support for EXPLAIN ANALYZE and output formats of JSON, XML, and YAML.}
