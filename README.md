@@ -46,61 +46,10 @@ Results in:
       "Actual Startup Time": 0.008,
       "Actual Total Time": 0.013,
       "Actual Rows": 30,
-      "Actual Loops": 1,
-      "Output": ["id", "canonical_id", "client_id", "wallet_type", "base_currency", "created_at", "updated_at", "deleted_at"],
-      "Recheck Cond": "(wallets.deleted_at IS NULL)",
-      "Rows Removed by Index Recheck": 0,
-      "Filter": "((wallets.base_currency)::text = 'USD'::text)",
-      "Rows Removed by Filter": 0,
-      "Exact Heap Blocks": 1,
-      "Lossy Heap Blocks": 0,
-      "Shared Hit Blocks": 2,
-      "Shared Read Blocks": 0,
-      "Shared Dirtied Blocks": 0,
-      "Shared Written Blocks": 0,
-      "Local Hit Blocks": 0,
-      "Local Read Blocks": 0,
-      "Local Dirtied Blocks": 0,
-      "Local Written Blocks": 0,
-      "Temp Read Blocks": 0,
-      "Temp Written Blocks": 0,
-      "Plans": [
-        {
-          "Node Type": "Bitmap Index Scan",
-          "Parent Relationship": "Outer",
-          "Parallel Aware": false,
-          "Index Name": "index_wallets_on_deleted_at",
-          "Startup Cost": 0.00,
-          "Total Cost": 4.16,
-          "Plan Rows": 2,
-          "Plan Width": 0,
-          "Actual Startup Time": 0.003,
-          "Actual Total Time": 0.003,
-          "Actual Rows": 32,
-          "Actual Loops": 1,
-          "Index Cond": "(wallets.deleted_at IS NULL)",
-          "Shared Hit Blocks": 1,
-          "Shared Read Blocks": 0,
-          "Shared Dirtied Blocks": 0,
-          "Shared Written Blocks": 0,
-          "Local Hit Blocks": 0,
-          "Local Read Blocks": 0,
-          "Local Dirtied Blocks": 0,
-          "Local Written Blocks": 0,
-          "Temp Read Blocks": 0,
-          "Temp Written Blocks": 0
-        }
-      ]
-    },
-    "Planning Time": 0.063,
-    "Triggers": [
-    ],
-    "Execution Time": 0.031
-  }
-]
+      ... truncated ...
 ```
 
-You can then paste this JSON output into [PEV](http://tatiyants.com/pev/) or similar tools to get a graphical explaniation:
+You can then paste this JSON output into [PEV](http://tatiyants.com/pev/) or similar tools to get a visualization of the EXPLAIN query output:
 
 <img width="673" alt="screen shot 2017-10-27 at 4 24 38 pm" src="https://user-images.githubusercontent.com/158675/32123765-6b4938ae-bb33-11e7-80b6-7d9ceac013e2.png">
 
