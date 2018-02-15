@@ -42,6 +42,10 @@ Planning time: 0.041 ms
 Execution time: 0.026 ms
 ```
 
+This can be copy-pasted into [explain.depesz.com](https://explain.depesz.com/):
+
+<img width="673" alt="explain.depesz.com example" src="https://user-images.githubusercontent.com/509837/36261515-7d350db0-125c-11e8-9c4b-618feb016971.png">
+
 You can output in `:json`, `:yaml`, and `:xml` formats as well. Below demonstrates JSON:
 
 ```ruby
