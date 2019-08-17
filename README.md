@@ -2,13 +2,13 @@
 
 Extends [`ActiveRecord#explain`](http://guides.rubyonrails.org/active_record_querying.html#running-explain) with support for EXPLAIN ANALYZE and output formats of JSON, XML, and YAML.
 
-It currently supports ActiveRecord 4 and 5, and PostgreSQL only.
+It currently supports ActiveRecord 4 through 6, and PostgreSQL only.
 
 #### What's EXPLAIN ANALYZE?
 
 From the [PostgreSQL docs](https://www.postgresql.org/docs/9.6/static/using-explain.html):
 
-> PostgreSQL devises a _query plan_ for each query it receives. Choosing the right plan to match the query structure and the properties of the data is absolutely critical for good performance, so the system includes a complex _planner_ that tries to choose good plans. You can use the **EXPLAIN** command to see what query plan the planner creates for any query. 
+> PostgreSQL devises a _query plan_ for each query it receives. Choosing the right plan to match the query structure and the properties of the data is absolutely critical for good performance, so the system includes a complex _planner_ that tries to choose good plans. You can use the **EXPLAIN** command to see what query plan the planner creates for any query.
 
 > With **EXPLAIN ANALYZE**, EXPLAIN actually executes the query, and then displays the true row counts and true run time accumulated within each plan node.
 
