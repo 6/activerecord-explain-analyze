@@ -4,6 +4,7 @@ require 'rspec'
 require 'rspec/collection_matchers'
 require 'rspec/its'
 require 'database_cleaner'
+require 'pg'
 
 class Car < ActiveRecord::Base
 end
@@ -21,9 +22,15 @@ def establish_connection(config)
 end
 
 def create_database
-  %x{psql -h localhost -p 5432 -c 'create database "#{db_config['database']}";' -U postgres;}
-  connection = establish_connection(db_config)
-  connection.create_database(db_config['database']) rescue nil
+  pg_connection = PG.connect({
+    dbname: 'postgres',
+    host: db_config['host'],
+    port: db_config['port'],
+  })
+  pg_connection.exec(%{DROP DATABASE IF EXISTS "#{db_config['database']}";})
+  pg_connection.exec(%{CREATE DATABASE "#{db_config['database']}";})
+  ar_connection = establish_connection(db_config)
+  ar_connection.create_database(db_config['database']) rescue nil
 end
 
 def create_table
