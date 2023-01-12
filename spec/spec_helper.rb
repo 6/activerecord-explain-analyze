@@ -58,6 +58,10 @@ RSpec.configure do |config|
     create_database
     create_table
 
+    # Print activerecord version:
+    puts "ActiveRecord version:"
+    system("bundle show activerecord")
+
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
     begin
