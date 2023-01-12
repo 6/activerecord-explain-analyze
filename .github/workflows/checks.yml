@@ -36,11 +36,10 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+        # bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Install ActiveRecord version ${{ matrix.activerecord-version }}
-      run: |
-        gem uninstall activerecord
-        gem install activerecord -v ${{ matrix.activerecord-version }}
+      run: gem install activerecord -v ${{ matrix.activerecord-version }}
+    - run: bundle install
     # - name: Lint
     #   run: bundle exec rubocop
     - name: Run tests
