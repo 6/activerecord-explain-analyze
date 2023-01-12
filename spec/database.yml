@@ -1,7 +1,9 @@
 postgres:
   adapter:  postgresql
   host:     localhost
+  port:     5432
   database: activerecord-explain-analyze_test
   username: postgres
+  password: postgres
   schema_search_path: public
   min_messages: warning
