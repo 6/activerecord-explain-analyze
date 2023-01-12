@@ -1,0 +1,33 @@
+name: checks
+
+on: [push, pull_request]
+
+jobs:
+  checks:
+    env:
+      RAILS_ENV: test
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432
+      DISABLE_BOOTSNAP: true
+      DISABLE_BOOTSNAP_LOAD_PATH_CACHE: true
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    # - name: Lint
+    #   run: bundle exec rubocop
+    - name: Run tests
+      run: bundle exec rspec
