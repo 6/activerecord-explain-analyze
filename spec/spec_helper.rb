@@ -1,8 +1,6 @@
 require "bundler/setup"
 require "activerecord-explain-analyze"
 require 'rspec'
-require 'rspec/collection_matchers'
-require 'rspec/its'
 require 'database_cleaner'
 require 'pg'
 

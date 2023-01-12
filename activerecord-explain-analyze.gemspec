@@ -27,9 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry"
-  spec.add_development_dependency "rspec-collection_matchers"
-  spec.add_development_dependency "rspec-its"
-  spec.add_development_dependency "rspec_junit_formatter"
   spec.add_development_dependency "bundler-audit"
   spec.add_development_dependency "database_cleaner"
 end
