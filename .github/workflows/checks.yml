@@ -17,7 +17,7 @@ jobs:
       matrix:
         # TODO: expand to more? 3.2.0, 3.0.5
         ruby-version: [2.7.7, 3.1.3]
-        activerecord-version: [4.2.11.3, 7.0.4]
+        rails-version: [4.2, 7.0]
     services:
       postgres:
         image: postgres:15
@@ -37,9 +37,8 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         # bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Install ActiveRecord version ${{ matrix.activerecord-version }}
-      run: gem install activerecord -v ${{ matrix.activerecord-version }}
-    - run: bundle install
+    - name: Using Rails version ${{ matrix.rails-version }}
+      run: bundle install --gemfile=spec/support/Gemfile-rails-${{ matrix.rails-version }}
     # - name: Lint
     #   run: bundle exec rubocop
     - name: Run tests
