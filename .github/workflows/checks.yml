@@ -5,10 +5,12 @@ on: [push, pull_request]
 jobs:
   checks:
     env:
-      RAILS_ENV: test
       DATABASE_URL: postgres://postgres:postgres@localhost:5432
       DISABLE_BOOTSNAP: true
       DISABLE_BOOTSNAP_LOAD_PATH_CACHE: true
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      RAILS_ENV: test
     runs-on: ubuntu-latest
     timeout-minutes: 15
     strategy:
