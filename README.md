@@ -1,4 +1,7 @@
-# activerecord-explain-analyze [![checks](https://github.com/6/activerecord-explain-analyze/actions/workflows/checks.yml/badge.svg)](https://github.com/6/activerecord-explain-analyze/actions/workflows/checks.yml) [![Gem Version](https://badge.fury.io/rb/activerecord-explain-analyze.svg)](https://rubygems.org/gems/activerecord-explain-analyze)
+> [!NOTE]
+> As of Rails 7.1+, `ActiveRecord#explain` now officially supports analyze options. See the [docs](https://guides.rubyonrails.org/active_record_querying.html#explain-options) and [PR](https://github.com/rails/rails/pull/47043) for details. This rubygem will remain available for older versions of Rails (<= 7.0).
+
+# activerecord-explain-analyze [![checks](https://github.com/6/activerecord-explain-analyze/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/6/activerecord-explain-analyze/actions/workflows/checks.yml) [![Gem Version](https://badge.fury.io/rb/activerecord-explain-analyze.svg)](https://rubygems.org/gems/activerecord-explain-analyze)
 
 Extends [`ActiveRecord#explain`](http://guides.rubyonrails.org/active_record_querying.html#running-explain) with support for EXPLAIN ANALYZE and output formats of JSON, XML, and YAML.
 
@@ -6,7 +9,7 @@ It currently has been tested to support:
 
 - ActiveRecord versions 4 through 7
 - PostgreSQL only
-- Ruby 2.7.x, 3.1.x, and 3.2.x
+- Ruby 2.7.x, 3.1.x, 3.2.x, 3.3.x
 
 #### What's EXPLAIN ANALYZE?
 
