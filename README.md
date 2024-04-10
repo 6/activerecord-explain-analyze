@@ -1,4 +1,4 @@
-# activerecord-explain-analyze [![checks](https://github.com/6/activerecord-explain-analyze/actions/workflows/checks.yml/badge.svg)](https://github.com/6/activerecord-explain-analyze/actions/workflows/checks.yml) [![Gem Version](https://badge.fury.io/rb/activerecord-explain-analyze.svg)](https://rubygems.org/gems/activerecord-explain-analyze)
+# activerecord-explain-analyze [![checks](https://github.com/6/activerecord-explain-analyze/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/6/activerecord-explain-analyze/actions/workflows/checks.yml) [![Gem Version](https://badge.fury.io/rb/activerecord-explain-analyze.svg)](https://rubygems.org/gems/activerecord-explain-analyze)
 
 Extends [`ActiveRecord#explain`](http://guides.rubyonrails.org/active_record_querying.html#running-explain) with support for EXPLAIN ANALYZE and output formats of JSON, XML, and YAML.
 
