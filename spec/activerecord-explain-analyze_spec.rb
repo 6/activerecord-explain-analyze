@@ -12,7 +12,12 @@ describe ActiveRecordExplainAnalyze do
     context "without any args" do
       it "returns normal explain output" do
         output = Car.where(model: "bmw").explain
-        expect(output).to start_with(%{EXPLAIN for: SELECT "cars"})
+        # AR 7.1+ has slightly different output:
+        if ActiveRecord::VERSION::MAJOR >= 7 && ActiveRecord::VERSION::MINOR >= 1
+          expect(output).to start_with(%{EXPLAIN SELECT "cars"})
+        else
+          expect(output).to start_with(%{EXPLAIN for: SELECT "cars"})
+        end
         expect(output).not_to include("actual time")
       end
     end
