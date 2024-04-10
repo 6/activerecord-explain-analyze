@@ -4,9 +4,9 @@ Extends [`ActiveRecord#explain`](http://guides.rubyonrails.org/active_record_que
 
 It currently has been tested to support:
 
-- ActiveRecord versions 4 through 7
+- ActiveRecord versions 4.2 through 7.1
 - PostgreSQL only
-- Ruby 2.7.x, 3.1.x, and 3.2.x
+- Ruby 2.7.x, 3.1.x, 3.2.x, 3.3.x
 
 #### What's EXPLAIN ANALYZE?
 
